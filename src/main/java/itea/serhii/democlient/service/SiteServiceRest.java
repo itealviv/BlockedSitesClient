@@ -15,9 +15,8 @@ public class SiteServiceRest implements SiteService {
     private final RestTemplate restTemplate;
     private final String serverUrl;
 
-    public SiteServiceRest(
-            RestTemplate restTemplate, @Value("${application.server.url}") String serverUrl
-    ) {
+    public SiteServiceRest(RestTemplate restTemplate,
+                           @Value("${application.server.url}") String serverUrl) {
         this.restTemplate = restTemplate;
         this.serverUrl = serverUrl;
     }
@@ -35,7 +34,7 @@ public class SiteServiceRest implements SiteService {
 
     public List<SiteInfo> getDefaultSites() {
         return Collections.singletonList(new SiteInfo() {{
-            setUrl("http://vk.com/");
+            setUrl("https://gogle.com/");
         }});
     }
 }
